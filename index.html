@@ -24,6 +24,21 @@
   <header class="header">
 
     <div class="header-head">
+      <ul class="header-head-nav-mobile">
+        <li class="header-head-nav-mobile__item">
+          <span class="header-head-nav-burger">
+
+          </span>
+        </li>
+        <li class="header-head-nav-mobile__item">
+          <a href="#" class="header-head-nav__logo logo-link"><img class="logo" src="img/logo.svg"
+            alt="художественная галерея, ссылка на главную страницу">
+          </a>
+        </li>
+        <li class="header-head-nav-mobile__item">
+
+        </li>
+      </ul>
       <div class="container header-head-nav">
         <a href="#" class="header-head-nav__logo logo-link"><img class="logo" src="img/logo.svg"
             alt="художественная галерея, ссылка на главную страницу"></a>
@@ -50,16 +65,16 @@
             <li class="header-head-nav__item">
               <a href="#contactss" class="header-head-nav__link">Контакты</a>
             </li>
-            <li class="header-head-nav__item">
-              <a href="#" class="header-head-nav__link">
-                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" fill="white"/>
-                </svg>
-                Войти
-              </a>
-            </li>
+            <!-- <li class="header-head-nav__item">
+            </li> -->
           </ul>
         </nav>
+        <a href="#" class="header-head-nav__link header-head__login">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" fill="white"/>
+          </svg>
+          Войти
+        </a>
       </div>
     </div>
 
@@ -134,16 +149,16 @@
             <button class="header-category__choices-btn" data-path="postimpressionism">Постимпрессионизм<span class="select__icon"></span></button>
             <div class="header-category-choices">
               <ul class="header-category-choices__list" data-simplebar data-target="postimpressionism">
-                <li class="header-category-choices__item"><div>Постимпрессионизм пункт 1</div></li>
-                <li class="header-category-choices__item"><div>Постимпрессионизм пункт 2</div></li>
-                <li class="header-category-choices__item"><div>Постимпрессионизм пункт 3</div></li>
-                <li class="header-category-choices__item"><div>Постимпрессионизм пункт 4</div></li>
-                <li class="header-category-choices__item"><div>Постимпрессионизм пункт 5</div></li>
-                <li class="header-category-choices__item"><div>Постимпрессионизм пункт 6</div></li>
-                <li class="header-category-choices__item"><div>Постимпрессионизм пункт 7</div></li>
-                <li class="header-category-choices__item"><div>Постимпрессионизм пункт 8</div></li>
-                <li class="header-category-choices__item"><div>Постимпрессионизм пункт 9</div></li>
-                <li class="header-category-choices__item"><div>Постимпрессионизм пункт 10</div></li>
+                <li class="header-category-choices__item"><div>пункт 1</div></li>
+                <li class="header-category-choices__item"><div>пункт 2</div></li>
+                <li class="header-category-choices__item"><div>пункт 3</div></li>
+                <li class="header-category-choices__item"><div>пункт 4</div></li>
+                <li class="header-category-choices__item"><div>пункт 5</div></li>
+                <li class="header-category-choices__item"><div>пункт 6</div></li>
+                <li class="header-category-choices__item"><div>пункт 7</div></li>
+                <li class="header-category-choices__item"><div>пункт 8</div></li>
+                <li class="header-category-choices__item"><div>пункт 9</div></li>
+                <li class="header-category-choices__item"><div>пункт 10</div></li>
               </ul>
             </div>
           </li>
@@ -192,9 +207,9 @@
 
           <li class="header-category__genre">
 
-            <form class="header__search--form" action="https://jsonplaceholder.typicode.com/posts" method="POST" target="blank">
-              <label class="search__form--button">
-                <input class="search__form--input" type="search" id="search" name="search" placeholder="Поиск по сайту" required minlength="3">
+            <form class="header-search-form" action="https://jsonplaceholder.typicode.com/posts" method="POST" target="blank">
+              <label class="header-search-form__button">
+                <input class="header-search-form__input" type="search" id="search" name="search" placeholder="Поиск по сайту" required minlength="3">
                 <span class="search__icon"></span>
               </label>
             </form>
@@ -276,36 +291,126 @@
           <span class="gallery-swiper-pagination gallery-swiper-pagination"></span>
           <button class="gallery-swiper-button icon--tringle gallery-swiper-button-next"></button>
           <div class="swiper-wrapper">
-            <div class="gallery-swiper__img gallery-swiper__img-1 swiper-slide"></div>
-            <div class="gallery-swiper__img gallery-swiper__img-2 swiper-slide"></div>
-            <div class="gallery-swiper__img gallery-swiper__img-3 swiper-slide"></div>
-            <div class="gallery-swiper__img gallery-swiper__img-4 swiper-slide"></div>
-            <div class="gallery-swiper__img gallery-swiper__img-5 swiper-slide"></div>
-            <div class="gallery-swiper__img gallery-swiper__img-6 swiper-slide"></div>
-            <div class="gallery-swiper__img gallery-swiper__img-7 swiper-slide"></div>
-            <div class="gallery-swiper__img gallery-swiper__img-8 swiper-slide"></div>
-            <div class="gallery-swiper__img gallery-swiper__img-9 swiper-slide"></div>
-            <div class="gallery-swiper__img gallery-swiper__img-10 swiper-slide"></div>
-            <div class="gallery-swiper__img gallery-swiper__img-11 swiper-slide"></div>
-            <div class="gallery-swiper__img gallery-swiper__img-12 swiper-slide"></div>
-            <div class="gallery-swiper__img gallery-swiper__img-13 swiper-slide"></div>
-            <div class="gallery-swiper__img gallery-swiper__img-14 swiper-slide"></div>
-            <div class="gallery-swiper__img gallery-swiper__img-15 swiper-slide"></div>
-            <div class="gallery-swiper__img gallery-swiper__img-16 swiper-slide"></div>
-            <div class="gallery-swiper__img gallery-swiper__img-17 swiper-slide"></div>
-            <div class="gallery-swiper__img gallery-swiper__img-18 swiper-slide"></div>
-            <div class="gallery-swiper__img gallery-swiper__img-19 swiper-slide"></div>
-            <div class="gallery-swiper__img gallery-swiper__img-20 swiper-slide"></div>
-            <div class="gallery-swiper__img gallery-swiper__img-21 swiper-slide"></div>
-            <div class="gallery-swiper__img gallery-swiper__img-22 swiper-slide"></div>
-            <div class="gallery-swiper__img gallery-swiper__img-23 swiper-slide"></div>
-            <div class="gallery-swiper__img gallery-swiper__img-24 swiper-slide"></div>
-            <div class="gallery-swiper__img gallery-swiper__img-25 swiper-slide"></div>
-            <div class="gallery-swiper__img gallery-swiper__img-26 swiper-slide"></div>
-            <div class="gallery-swiper__img gallery-swiper__img-27 swiper-slide"></div>
-            <div class="gallery-swiper__img gallery-swiper__img-28 swiper-slide"></div>
-            <div class="gallery-swiper__img gallery-swiper__img-29 swiper-slide"></div>
-            <div class="gallery-swiper__img gallery-swiper__img-30 swiper-slide"></div>
+            <div class="gallery-swiper__img gallery-swiper__img-1 swiper-slide" tabindex="">
+              <span class="gallery-swiper__hover-icon"></span>
+              <svg width="78" height="76" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/> <path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/> <path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/> </svg>
+            </div>
+            <div class="gallery-swiper__img gallery-swiper__img-2 swiper-slide"  tabindex="0">
+              <span class="gallery-swiper__hover-icon"></span>
+              <svg width="78" height="76" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/> <path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/> <path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/> </svg>
+            </div>
+            <div class="gallery-swiper__img gallery-swiper__img-3 swiper-slide"  tabindex="0">
+              <span class="gallery-swiper__hover-icon"></span>
+              <svg width="78" height="76" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/> <path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/> <path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/> </svg>
+            </div>
+            <div class="gallery-swiper__img gallery-swiper__img-4 swiper-slide"  tabindex="0">
+              <span class="gallery-swiper__hover-icon"></span>
+              <svg width="78" height="76" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/> <path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/> <path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/> </svg>
+            </div>
+            <div class="gallery-swiper__img gallery-swiper__img-5 swiper-slide"  tabindex="0">
+              <span class="gallery-swiper__hover-icon"></span>
+              <svg width="78" height="76" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/> <path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/> <path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/> </svg>
+            </div>
+            <div class="gallery-swiper__img gallery-swiper__img-6 swiper-slide"  tabindex="0">
+              <span class="gallery-swiper__hover-icon"></span>
+              <svg width="78" height="76" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/> <path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/> <path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/> </svg>
+            </div>
+            <div class="gallery-swiper__img gallery-swiper__img-7 swiper-slide"  tabindex="0">
+              <span class="gallery-swiper__hover-icon"></span>
+              <svg width="78" height="76" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/> <path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/> <path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/> </svg>
+            </div>
+            <div class="gallery-swiper__img gallery-swiper__img-8 swiper-slide"  tabindex="0">
+              <span class="gallery-swiper__hover-icon"></span>
+              <svg width="78" height="76" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/> <path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/> <path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/> </svg>
+            </div>
+            <div class="gallery-swiper__img gallery-swiper__img-9 swiper-slide"  tabindex="0">
+              <span class="gallery-swiper__hover-icon"></span>
+              <svg width="78" height="76" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/> <path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/> <path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/> </svg>
+            </div>
+            <div class="gallery-swiper__img gallery-swiper__img-10 swiper-slide"  tabindex="0">
+              <span class="gallery-swiper__hover-icon"></span>
+              <svg width="78" height="76" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/> <path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/> <path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/> </svg>
+            </div>
+            <div class="gallery-swiper__img gallery-swiper__img-11 swiper-slide"  tabindex="0">
+              <span class="gallery-swiper__hover-icon"></span>
+              <svg width="78" height="76" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/> <path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/> <path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/> </svg>
+            </div>
+            <div class="gallery-swiper__img gallery-swiper__img-12 swiper-slide"  tabindex="0">
+              <span class="gallery-swiper__hover-icon"></span>
+              <svg width="78" height="76" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/> <path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/> <path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/> </svg>
+            </div>
+            <div class="gallery-swiper__img gallery-swiper__img-13 swiper-slide"  tabindex="0">
+              <span class="gallery-swiper__hover-icon"></span>
+              <svg width="78" height="76" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/> <path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/> <path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/> </svg>
+            </div>
+            <div class="gallery-swiper__img gallery-swiper__img-14 swiper-slide"  tabindex="0">
+              <span class="gallery-swiper__hover-icon"></span>
+              <svg width="78" height="76" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/> <path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/> <path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/> </svg>
+            </div>
+            <div class="gallery-swiper__img gallery-swiper__img-15 swiper-slide"  tabindex="0">
+              <span class="gallery-swiper__hover-icon"></span>
+              <svg width="78" height="76" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/> <path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/> <path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/> </svg>
+            </div>
+            <div class="gallery-swiper__img gallery-swiper__img-16 swiper-slide"  tabindex="0">
+              <span class="gallery-swiper__hover-icon"></span>
+              <svg width="78" height="76" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/> <path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/> <path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/> </svg>
+            </div>
+            <div class="gallery-swiper__img gallery-swiper__img-17 swiper-slide"  tabindex="0">
+              <span class="gallery-swiper__hover-icon"></span>
+              <svg width="78" height="76" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/> <path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/> <path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/> </svg>
+            </div>
+            <div class="gallery-swiper__img gallery-swiper__img-18 swiper-slide"  tabindex="0">
+              <span class="gallery-swiper__hover-icon"></span>
+              <svg width="78" height="76" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/> <path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/> <path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/> </svg>
+            </div>
+            <div class="gallery-swiper__img gallery-swiper__img-19 swiper-slide"  tabindex="0">
+              <span class="gallery-swiper__hover-icon"></span>
+              <svg width="78" height="76" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/> <path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/> <path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/> </svg>
+            </div>
+            <div class="gallery-swiper__img gallery-swiper__img-20 swiper-slide"  tabindex="0">
+              <span class="gallery-swiper__hover-icon"></span>
+              <svg width="78" height="76" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/> <path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/> <path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/> </svg>
+            </div>
+            <div class="gallery-swiper__img gallery-swiper__img-21 swiper-slide"  tabindex="0">
+              <span class="gallery-swiper__hover-icon"></span>
+              <svg width="78" height="76" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/> <path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/> <path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/> </svg>
+            </div>
+            <div class="gallery-swiper__img gallery-swiper__img-22 swiper-slide"  tabindex="0">
+              <span class="gallery-swiper__hover-icon"></span>
+              <svg width="78" height="76" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/> <path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/> <path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/> </svg>
+            </div>
+            <div class="gallery-swiper__img gallery-swiper__img-23 swiper-slide"  tabindex="0">
+              <span class="gallery-swiper__hover-icon"></span>
+              <svg width="78" height="76" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/> <path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/> <path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/> </svg>
+            </div>
+            <div class="gallery-swiper__img gallery-swiper__img-24 swiper-slide"  tabindex="0">
+              <span class="gallery-swiper__hover-icon"></span>
+              <svg width="78" height="76" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/> <path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/> <path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/> </svg>
+            </div>
+            <div class="gallery-swiper__img gallery-swiper__img-25 swiper-slide"  tabindex="0">
+              <span class="gallery-swiper__hover-icon"></span>
+              <svg width="78" height="76" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/> <path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/> <path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/> </svg>
+            </div>
+            <div class="gallery-swiper__img gallery-swiper__img-26 swiper-slide"  tabindex="0">
+              <span class="gallery-swiper__hover-icon"></span>
+              <svg width="78" height="76" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/> <path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/> <path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/> </svg>
+            </div>
+            <div class="gallery-swiper__img gallery-swiper__img-27 swiper-slide"  tabindex="0">
+              <span class="gallery-swiper__hover-icon"></span>
+              <svg width="78" height="76" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/> <path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/> <path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/> </svg>
+            </div>
+            <div class="gallery-swiper__img gallery-swiper__img-28 swiper-slide"  tabindex="0">
+              <span class="gallery-swiper__hover-icon"></span>
+              <svg width="78" height="76" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/> <path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/> <path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/> </svg>
+            </div>
+            <div class="gallery-swiper__img gallery-swiper__img-29 swiper-slide"  tabindex="0">
+              <span class="gallery-swiper__hover-icon"></span>
+              <svg width="78" height="76" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/> <path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/> <path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/> </svg>
+            </div>
+            <div class="gallery-swiper__img gallery-swiper__img-30 swiper-slide"  tabindex="0">
+              <span class="gallery-swiper__hover-icon"></span>
+              <svg width="78" height="76" viewBox="0 0 81 79" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect width="25.1624" height="6.2906" transform="matrix(-0.72074 0.693205 0.72074 0.693205 18.1355 57.1965)" fill="white"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M44.2696 65.7708C28.0411 65.7708 14.8853 52.6834 14.8853 36.5393C14.8853 20.3952 28.0411 7.30786 44.2696 7.30786C60.4981 7.30786 73.6539 20.3952 73.6539 36.5393C73.6539 52.6834 60.4981 65.7708 44.2696 65.7708ZM44.2696 73.0786C23.984 73.0786 7.53923 56.7194 7.53923 36.5393C7.53923 16.3592 23.984 0 44.2696 0C64.5552 0 81 16.3592 81 36.5393C81 56.7194 64.5552 73.0786 44.2696 73.0786Z" fill="white"/> <path d="M42 24L42 49L47.9954 49L47.9955 24L42 24Z" fill="white"/> <path d="M57.2336 34L32.2336 34L32.2336 39.9954L57.2336 39.9955L57.2336 34Z" fill="white"/> </svg>
+            </div>
           </div>
         </div>
       </div>

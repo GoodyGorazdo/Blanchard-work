@@ -14,16 +14,25 @@ document.addEventListener('DOMContentLoaded', function() {
       el: '.gallery-swiper-pagination',
       type: 'fraction',
     },
-    grabCursor: true,
+    // grabCursor: true,
     keyboard: {
       enabled: true,
     },
-    slidesPerView: 3,
-    spaceBetween: 50,
-    slidesPerGroup: 3,
+    slidesPerView: 2,
+    spaceBetween: 34,
+    slidesPerGroup: 2,
     slidesPerColumn: 2,
 
+    breakpoints: {
+      1299: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+        slidesPerGroup: 3,
+        slidesPerColumn: 2,
+      }
+    }
   });
+  // Swiper.updateSize(".gallery-swiper"),
 
   new Swiper('.editions-swiper',{
 
@@ -39,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
       el: '.editions-swiper-pagination',
       type: 'fraction',
     },
-    grabCursor: true,
+    // grabCursor: true,
     keyboard: {
       enabled: true,
     },
@@ -124,6 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll(`[data-target="${lang}"]`).forEach(function(langActive){
           langActive.classList.add('catalog-accordeon-choices__list--active')
         });
+        $("#accordeon").accordeon("refresh");
       });
     });
     document.querySelectorAll('.catalog-accordeon-choices__item-btn').forEach(function(choiceBtn) {
