@@ -63,6 +63,7 @@ a:active {
 custom-button {
   cursor: pointer;
 }
+
 .tooltip_icon {
   display: inline-flex;
   position: relative;
@@ -483,7 +484,6 @@ custom-button {
 .search__form--input {
   width: 218px;
   height: 25px;
-  /* margin-bottom: 2px; */
   padding-bottom: 2px;
   border-top: none;
   border-left: none;
@@ -501,13 +501,6 @@ custom-button {
   color: var(--color--text--1);
   opacity: 1;
 }
-/* .header__search--form :focus-visible,
-.header__search--form :-moz-focusring {
-  border-bottom: 1px solid #7943A4;
-  outline: none;
-  outline-offset: 5px;
-} */
-
 .search__form--input:focus + span::before,
 .search__form--input:-moz-focusring  + span::before {
   border: 2px solid var(--color--main--2);
@@ -519,9 +512,6 @@ custom-button {
 .search__form--input:active {
   border-bottom: 1px solid var(--color--main--2);
 }
-/* .search__form--input:focus {
-  border-bottom: 1px solid var(--color--main--2);
-} */
 .hero {
   height: 800px;
   position: relative;
@@ -642,9 +632,14 @@ custom-button {
   left: -0.3%;
   z-index: 4;
 }
+.hero__title,
+.hero__text,
+.hero__action-link,
+.hero__action-link:active  {
+  color: var(--color--text--1);
+}
 .hero__title {
   margin-bottom: 1.18rem;
-  color: var(--color--text--1);
 }
 .hero__text {
   margin-left: 5px;
@@ -652,7 +647,6 @@ custom-button {
   font-weight: bold;
   font-size: var(--font-size--18px);
   line-height: 30px;
-  color: var(--color--text--1);
 }
 .hero__action-link {
   margin-left: 4px;
@@ -661,7 +655,6 @@ custom-button {
   font-size: var(--font-size--18px);
   line-height: 25px;
   text-align: center;
-  color: var(--color--text--1);
   background-color: var(--color--main--1);
   border: 3px solid var(--color--main--1);
 }
@@ -675,7 +668,6 @@ custom-button {
 .hero__action-link:active {
   background-color: var(--color--main--4);
   border: 3px solid var(--color--main--3);
-  color: var(--color--text--1);
 }
 .about-us__wrap {
   margin-bottom: 70px;
@@ -705,10 +697,16 @@ custom-button {
 .gallery-content {
   height: 100%;
 }
+.gallery-content__title,
+.gallery-content__subtitle,
+.gallery-content-select__current,
+.gallery-content-select__text-info,
+.gallery-swiper-pagination {
+  color: var(--color--text--1);
+}
 .gallery-content__title {
   margin-bottom: 16px;
   margin-left: -2px;
-  color: var(--color--text--1);
 }
 .gallery-content__filter-wrap {
   position: relative;
@@ -718,7 +716,6 @@ custom-button {
 .gallery-content__subtitle {
   display: inline-block;
   font-weight: 600;
-  color: var(--color--text--1);
   margin-bottom: 10px;
 }
 .gallery-content-select {
@@ -749,7 +746,6 @@ custom-button {
   position: absolute;
   padding: 0 14px;
   bottom: 4px;
-  color: var(--color--text--1);
 }
 .gallery-content-select__icon {
   display: inline-block;
@@ -801,7 +797,6 @@ custom-button {
   width: 350px;
   bottom: 0;
   font-weight: 600;
-  color: var(--color--text--1);
 }
 .gallery-swiper {
   padding-top: 1.12rem;
@@ -811,7 +806,6 @@ custom-button {
 .gallery-swiper-button {
   margin-right: 15px;
   margin-left: 2px;
-  /* margin-left: 1px; */
   top: 7px;
 }
 .gallery-swiper-button:focus {
@@ -846,9 +840,7 @@ custom-button {
 }
 .gallery-swiper-pagination {
   margin-right: 14px;
-  color: var(--color--text--1);
 }
-
 .swiper-wrapper {
   position: relative;
 }
@@ -859,9 +851,6 @@ custom-button {
   max-width: 350px;
   margin-right: 50px;
   height: 350px;
-}
-.gallery-swiper__img {
-
 }
 .gallery-swiper__img-1 {
   background: url(/img/gallery/Rectangle1.jpg) no-repeat;
@@ -955,8 +944,6 @@ custom-button {
 }
 .catalog {
   margin-bottom: 5rem;
-  /* padding: 41px; */
-  /* padding-left: 2px; */
 }
 .catalog-header {
   display: flex;
@@ -967,7 +954,6 @@ custom-button {
   display: flex;
   margin-left: 1.66%;
   padding-top: .18rem;
-  /* padding-top: 11px; */
   align-content: center;
 }
 .catalog-header__item {
@@ -999,8 +985,6 @@ custom-button {
 }
 .catalog-header__btn:hover {
   filter: drop-shadow(0px 0px 20px rgba(157, 92, 208, 0.7));
-  /* border: 2px solid var(--color--main--1); */
-  /* border-radius: 100%; */
 }
 .catalog-header__btn:active {
   border: 2px solid var(--color--main--1);
@@ -1100,20 +1084,20 @@ custom-button {
   background-color:#ECECEC;
   border: 2px solid#ECECEC;
 }
-.accordeon__icon:focus::after {
-  border: 2px solid var(--color--main--4);
-}
 .accordeon__icon:hover::after {
   background-color: var(--color--main--1);
   border: 2px solid var(--color--main--1);
 }
-.accordeon__icon:hover::before {
-  border-bottom: 1px solid var(--color--text--1);
-  border-left: 1px solid var(--color--text--1);
+.accordeon__icon:focus::after {
+  border: 2px solid var(--color--main--4);
 }
 .accordeon__icon:active::after {
   background-color: var(--color--main--4);
   border: 2px solid var(--color--main--3);
+}
+.accordeon__icon:hover::before {
+  border-bottom: 1px solid var(--color--text--1);
+  border-left: 1px solid var(--color--text--1);
 }
 .ui-accordion-header-active .accordeon__icon {
   transform: rotate(180deg);
@@ -1195,12 +1179,15 @@ custom-button {
   line-height: 1rem;
   color: #999999
 }
+.events__list,
+.events {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
 .events {
   margin-bottom: 5rem;
-  -webkit-transition: all 0.1s ease-in-out;
-  -moz-transition: all 0.1s ease-in-out;
-  -o-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
 }
 .events__title {
   margin-bottom: 1.0625rem;
@@ -1211,10 +1198,6 @@ custom-button {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 3.06rem;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
 }
 .events__item {
   display: block;
@@ -1304,10 +1287,6 @@ custom-button {
 .events__btn {
   padding: 15px 34px;
   margin: auto;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
 }
 .events__btn:before {
   content: 'Все события';
@@ -1323,16 +1302,18 @@ custom-button {
   color: var(--color--text--1);
 }
 .events__list--active + .events__btn--wrapped .events__btn:before {
-  content: 'Скрыть';
+  content: 'Скрыть события';
 }
 .editions {
   height: 763px;
   margin-bottom: 5rem;
   padding: 5rem;
+  position: relative;
   background-image: url(/img/editions/editions_background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: -8px;
+  z-index: 2;
 }
 .editions__wrap {
   display: flex;
@@ -1510,7 +1491,6 @@ custom-button {
   flex-basis: 100%;
 }
 .editions-swiper-action__title {
-  /* margin-bottom: .rem; */
   color:var(--color--text--1);
 }
 .editions-swiper-action__author-name {
@@ -1664,6 +1644,7 @@ custom-button {
   filter: grayscale(0);
 }
 .contactss__title {
+  margin-left: -4px;
   margin-bottom: 1rem;
 }
 .contactss {
