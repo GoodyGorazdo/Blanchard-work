@@ -80,7 +80,7 @@
 
     <div class="header-category">
 
-      <div class="container">
+      <div class="header-category__wraper container">
         <ul class="header-category__list">
           <li class="header-category__genre">
 
@@ -205,17 +205,13 @@
             </div>
           </li>
 
-          <li class="header-category__genre">
-
-            <form class="header-search-form" action="https://jsonplaceholder.typicode.com/posts" method="POST" target="blank">
-              <label class="header-search-form__button">
-                <input class="header-search-form__input" type="search" id="search" name="search" placeholder="Поиск по сайту" required minlength="3">
-                <span class="search__icon"></span>
-              </label>
-            </form>
-          </li>
-
         </ul>
+        <form class="header-search-form" action="https://jsonplaceholder.typicode.com/posts" method="POST" target="blank">
+          <label class="header-search-form__button">
+            <input class="header-search-form__input" type="search" id="search" name="search" placeholder="Поиск по сайту" required minlength="3">
+            <span class="search__icon"></span>
+          </label>
+        </form>
       </div>
 
     </div>
