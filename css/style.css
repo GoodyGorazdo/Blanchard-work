@@ -744,7 +744,7 @@ custom-button {
 }
 .gallery-content {
   height: 100%;
-  width: 33.7%;
+  width: 35.2%;
 }
 .gallery-content__title {
   margin-bottom: 16px;
@@ -846,8 +846,8 @@ custom-button {
 }
 .gallery-swiper {
   margin-left: 3px;
+  margin-left: 46px;
   padding-top: 1.12rem;
-  margin-left: 63px;
   width: 100%;
 }
 .gallery-swiper-button {
