@@ -189,7 +189,6 @@ a:active {
   z-index: 5;
 }
 .header-head {
-  /* height: calc(45px + 52*((100vw - 320px) / 1280)); */
   height: 97px;
   overflow: hidden;
   background-color: var(--color-dark);
