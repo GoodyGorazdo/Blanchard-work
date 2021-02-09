@@ -263,6 +263,7 @@ a:active {
   background-color: var(--color-dark-opacity);
 }
 .header-category__wraper {
+  position: relative;
   display: flex;
   align-items: center;
 }
@@ -277,7 +278,7 @@ a:active {
   padding-top: 2px;
 }
 .header-category__genre:not(:last-child) {
-  margin-right: 7.22%;
+  margin-right: 6.9%;
 }
 .header-category__genre:hover .header-category-choices {
   visibility: visible;
@@ -444,9 +445,18 @@ a:active {
   border-radius: 0px;
 }
 .header-search-form {
-  width: 220px;
+  width: 250px;
+  right: 4px;
+  position: absolute;
   display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
 }
+.search__icon {
+  padding-top: 9px;
+  margin-right: 9px;
+}
+
 .search__icon:hover svg,
 .search__icon:hover svg rect,
 .search__icon:hover svg path {
@@ -456,6 +466,7 @@ a:active {
   transition-timing-function:  ease-in-out;
 }
 .header-search-form__input-wrap {
+  padding-top: 6px;
   position: relative;
   display: inline-flex;
   height: 22px;
@@ -463,9 +474,10 @@ a:active {
   cursor: pointer;
 }
 .header-search-form__input {
-  width: 218px;
+  width: 239px;
   height: 25px;
-  padding-bottom: 2px;
+  padding: 0;
+  /* padding-top: 28px; */
   border-top: none;
   border-left: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.85);
@@ -486,9 +498,13 @@ a:active {
 .header-search-form__input:focus::placeholder {
   opacity: 0;
 }
-.header-search-form__input:focus + span::before,
-.header-search-form__input:-moz-focusring  + span::before {
-  border: 2px solid var(--color--main--2);
+.header-search-form__input:focus + .search__icon svg,
+.header-search-form__input:-moz-focusring + .search__icon svg,
+.header-search-form__input:focus + .search__icon svg rect,
+.header-search-form__input:-moz-focusring + .search__icon svg rect
+.header-search-form__input:focus + .search__icon svg path,
+.header-search-form__input:-moz-focusring + .search__icon svg path {
+  fill: var(--color--main--2);
 }
 .header-search-form__input:focus + span::after,
 .header-search-form__input:-moz-focusring  + span::after {
@@ -660,6 +676,8 @@ a:active {
 }
 .about-us__title {
   margin-bottom: 16px;
+  left: -3px;
+  position: relative;
 }
 .gallery__wrap {
   width: 100%;
@@ -684,6 +702,8 @@ a:active {
 }
 .gallery-content__title {
   margin-bottom: 16px;
+  left: -3px;
+  position: relative;
   color: var(--color--text--1);
 }
 .gallery-content__filter-wrap {
@@ -1742,6 +1762,10 @@ a:active {
 }
 .footer__item:first-child {
   margin-right: auto;
+}
+.footer__item:last-child {
+  left: -4px;
+  position: relative;
 }
 .footer__links {
   height: 100%;
