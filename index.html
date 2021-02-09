@@ -24,24 +24,8 @@
   <header class="header">
 
     <div class="header-head">
-      <ul class="header-head-nav-mobile">
-        <li class="header-head-nav-mobile__item">
-          <span class="header-head-nav-burger">
-
-          </span>
-        </li>
-        <li class="header-head-nav-mobile__item">
-          <a href="#" class="header-head-nav__logo logo-link"><img class="logo" src="img/logo.svg"
-            alt="художественная галерея, ссылка на главную страницу">
-          </a>
-        </li>
-        <li class="header-head-nav-mobile__item">
-
-        </li>
-      </ul>
       <div class="container header-head-nav">
-        <a href="#" class="header-head-nav__logo logo-link"><img class="logo" src="img/logo.svg"
-            alt="художественная галерея, ссылка на главную страницу"></a>
+        <a href="#" class="header-head-nav__logo logo-link"><img class="logo" src="img/logo.svg" alt="художественная галерея, ссылка на главную страницу"></a>
         <nav class="header-head-nav__wrap">
           <ul class="header-head-nav__list">
             <li class="header-head-nav__item">
@@ -85,9 +69,9 @@
           <li class="header-category__genre">
 
             <button class="header-category__choices-btn" data-path="realism">Реализм<span class="select__icon"></span></button>
-            <div class="header-category-choices">
+            <div class="header-category-choices" data-target="realism">
 
-              <ul class="header-category-choices__list" data-simplebar data-target="realism">
+              <ul class="header-category-choices__list" data-simplebar>
                 <li class="header-category-choices__item"><div>Реализм пункт 1</div></li>
                 <li class="header-category-choices__item"><div>Реализм пункт 2</div></li>
                 <li class="header-category-choices__item"><div>Реализм пункт 3</div></li>
@@ -127,9 +111,9 @@
 
             <button class="header-category__choices-btn" data-path="impressionism">Импрессионизм<span
                 class="select__icon"></span></button>
-                <div class="header-category-choices">
+                <div class="header-category-choices" data-target="impressionism">
 
-                  <ul class="header-category-choices__list" data-simplebar data-target="impressionism">
+                  <ul class="header-category-choices__list" data-simplebar>
                     <li class="header-category-choices__item"><div>Импрессионизм пункт 1</div></li>
                     <li class="header-category-choices__item"><div>Импрессионизм пункт 2</div></li>
                     <li class="header-category-choices__item"><div>Импрессионизм пункт 3</div></li>
@@ -147,8 +131,8 @@
           <li class="header-category__genre">
 
             <button class="header-category__choices-btn" data-path="postimpressionism">Постимпрессионизм<span class="select__icon"></span></button>
-            <div class="header-category-choices">
-              <ul class="header-category-choices__list" data-simplebar data-target="postimpressionism">
+            <div class="header-category-choices" data-target="postimpressionism">
+              <ul class="header-category-choices__list" data-simplebar>
                 <li class="header-category-choices__item"><div>пункт 1</div></li>
                 <li class="header-category-choices__item"><div>пункт 2</div></li>
                 <li class="header-category-choices__item"><div>пункт 3</div></li>
@@ -167,9 +151,9 @@
 
             <button class="header-category__choices-btn" data-path="vanguard">Авангард<span
                 class="select__icon"></span></button>
-                <div class="header-category-choices">
+                <div class="header-category-choices" data-target="vanguard">
 
-                  <ul class="header-category-choices__list" data-simplebar data-target="vanguard">
+                  <ul class="header-category-choices__list" data-simplebar>
                     <li class="header-category-choices__item"><div>Авангард пункт 1</div></li>
                     <li class="header-category-choices__item"><div>Авангард пункт 2</div></li>
                     <li class="header-category-choices__item"><div>Авангард пункт 3</div></li>
@@ -188,9 +172,9 @@
 
             <button class="header-category__choices-btn" data-path="futurism">Футуризм<span
                 class="select__icon"></span></button>
-            <div class="header-category-choices">
+            <div class="header-category-choices" data-target="futurism">
 
-              <ul class="header-category-choices__list" data-simplebar data-target="futurism">
+              <ul class="header-category-choices__list" data-simplebar>
                 <li class="header-category-choices__item"><div>Футуризм пункт 1</div></li>
                 <li class="header-category-choices__item"><div>Футуризм пункт 2</div></li>
                 <li class="header-category-choices__item"><div>Футуризм пункт 3</div></li>
@@ -209,7 +193,7 @@
         <form class="header-search-form" action="https://jsonplaceholder.typicode.com/posts" method="POST" target="blank">
           <label class="header-search-form__button">
             <input class="header-search-form__input" type="search" id="search" name="search" placeholder="Поиск по сайту" required minlength="3">
-            <span class="search__icon"></span>
+            <button class="search__icon"></button>
           </label>
         </form>
       </div>
@@ -230,9 +214,9 @@
       </div>
       <div class="hero__wrap container">
         <div class="hero__text-action">
-          <h1 class="hero__title">
+          <h2 class="hero__title">
             Прикоснитесь к прекрасному
-          </h1>
+          </h2>
           <p class="hero__text">
             Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых
             предложений.
@@ -283,9 +267,12 @@
           </div>
         </div>
         <div class="gallery-swiper swiper-container">
-          <button class="gallery-swiper-button icon--tringle gallery-swiper-button-prev"></button>
-          <span class="gallery-swiper-pagination gallery-swiper-pagination"></span>
-          <button class="gallery-swiper-button icon--tringle gallery-swiper-button-next"></button>
+          <div class="gallery-swiper-pgination__wrap">
+
+            <button class="gallery-swiper-button icon--tringle gallery-swiper-button-prev"></button>
+            <span class="gallery-swiper-pagination gallery-swiper-pagination"></span>
+            <button class="gallery-swiper-button icon--tringle gallery-swiper-button-next"></button>
+          </div>
           <div class="swiper-wrapper">
             <div class="gallery-swiper__img gallery-swiper__img-1 swiper-slide" tabindex="">
               <span class="gallery-swiper__hover-icon"></span>
@@ -3336,8 +3323,8 @@
               Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили
               его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело.
             </p>
-            <a href="#" class="events--event-link">Подробнее</a>
           </div>
+          <a href="#" class="events--event-link">Подробнее</a>
         </article>
         <article class="events__item">
           <img class="events__img" src="img/events/event-2.jpg" alt="">
@@ -3354,8 +3341,8 @@
               постоянный количественный рост и сфера нашей активности представляет собой интересный эксперимент проверки
               новых принципов формирования...
             </p>
-            <a href="#" class="events--event-link">Подробнее</a>
           </div>
+          <a href="#" class="events--event-link">Подробнее</a>
         </article>
         <article class="events__item">
           <img class="events__img" src="img/events/event-3.jpg" alt="">
@@ -3372,8 +3359,8 @@
               формировании глубокомысленных рассуждений. Также как перспективное планирование играет определяющее значение
               для новых принципов формирования материально-технической и кадровой базы.
             </p>
-            <a href="#" class="events--event-link">Подробнее</a>
           </div>
+          <a href="#" class="events--event-link">Подробнее</a>
         </article>
         <article class="events__item">
           <img class="events__img" src="img/events/event-4.jpg" alt="">
@@ -3390,8 +3377,8 @@
               как квинтэссенцию победы маркетинга над разумом и должны быть рассмотрены исключительно в разрезе
               маркетинговых и финансовых...
             </p>
-            <a href="#" class="events--event-link">Подробнее</a>
           </div>
+          <a href="#" class="events--event-link">Подробнее</a>
         </article>
         <article class="events__item">
           <img class="events__img" src="img/events/event-5.jpg" alt="">
@@ -3407,8 +3394,8 @@
               Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили
               его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело.
             </p>
-            <a href="#" class="events--event-link">Подробнее</a>
           </div>
+          <a href="#" class="events--event-link">Подробнее</a>
         </article>
       </div>
       <div class="events__btn--wrapped">

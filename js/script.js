@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     breakpoints: {
       1299: {
         slidesPerView: 3,
-        spaceBetween: 50,
+        spaceBetween: 52,
         slidesPerGroup: 3,
         slidesPerColumn: 2,
       }
@@ -52,9 +52,17 @@ document.addEventListener('DOMContentLoaded', function() {
     keyboard: {
       enabled: true,
     },
-    slidesPerView: 3,
-    spaceBetween: 52,
-    slidesPerGroup: 3,
+    slidesPerView: 2,
+    spaceBetween: 50,
+    slidesPerGroup: 2,
+
+    breakpoints: {
+      1299: {
+        slidesPerView: 3,
+        spaceBetween: 52,
+        slidesPerGroup: 3,
+      }
+    }
   });
   new Swiper('.projects__swiper',{
 
@@ -70,9 +78,16 @@ document.addEventListener('DOMContentLoaded', function() {
     keyboard: {
       enabled: true,
     },
-    slidesPerView: 3,
+    slidesPerView: 2,
     spaceBetween: 50,
-    // slidesPerGroup: 3,
+
+    breakpoints: {
+      1299: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+        // slidesPerGroup: 3,
+      }
+    }
   });
   // new Swiper('.projects__swiper',{
 
@@ -95,8 +110,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   document.addEventListener('click', function(e) {
     if (!e.target.classList.contains('header-category__choices-btn')) {
-      document.querySelectorAll('.header-category-choices__list').forEach(function(clickdel) {
-        clickdel.classList.remove('header-category-choices__list--active')
+      document.querySelectorAll('.header-category-choices').forEach(function(clickdel) {
+        clickdel.classList.remove('header-category-choices--active')
       });
      }
   });
@@ -112,11 +127,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const path = event.currentTarget.dataset.path
 
       //у каждого элемента, имеющего нужный класс удаляем из списка классов определенный класс(это чтобы отображался только один таб, на который был совешен клик а остальные были скрыиты)
-        document.querySelectorAll('.header-category-choices__list').forEach(function(tabContent) {
-          tabContent.classList.remove('header-category-choices__list--active')
+        document.querySelectorAll('.header-category-choices').forEach(function(tabContent) {
+          tabContent.classList.remove('header-category-choices--active')
         });
         //добавляем нужный класс элементу, по которому был совершен клик(ссылаемся на конкретный таб с помощью html атрибута data-произвольноеназвание)
-        document.querySelector(`[data-target="${path}"]`).classList.add('header-category-choices__list--active')
+        document.querySelector(`[data-target="${path}"]`).classList.add('header-category-choices--active')
       });
     });
 
