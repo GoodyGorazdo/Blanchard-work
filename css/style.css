@@ -49,7 +49,7 @@ a {
   text-decoration: none;
   color: var(--color--main--1);
   caret-color: transparent;
-  transition-property: color, border-bottom-color;
+  transition-property: color, border-color;
   transition-duration:  0.2s;
   transition-timing-function:  ease-in-out;
 }
@@ -1226,6 +1226,9 @@ a:active {
   font-family: 'Open Sans', sans-serif;
   border-bottom: 1px solid transparent;
   color: var(--color--text);
+  transition-property: color, border-color;
+  transition-duration:  0.2s;
+  transition-timing-function:  ease-in-out;
 }
 .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
   font-family: 'Open Sans', sans-serif;
