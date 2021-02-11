@@ -11,15 +11,15 @@
 let select = function () {
   let selectHeader = document.querySelectorAll('.gallery-content-select__head');
   // отменен выбор эементов списка
-  // let selectItem = document.querySelectorAll('.select__gallery--item');
+  let selectItem = document.querySelectorAll('.gallery-content-select__item');
 
   selectHeader.forEach(item => {
       item.addEventListener('click', selectToggle)
   });
 
-  // selectItem.forEach(item => {
-  //     item.addEventListener('click', selectChoose)
-  // });
+  selectItem.forEach(item => {
+      item.addEventListener('click', selectChoose)
+  });
 
   function selectToggle() {
       this.parentElement.classList.toggle('is-active');

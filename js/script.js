@@ -19,14 +19,14 @@ document.addEventListener('DOMContentLoaded', function() {
       enabled: true,
     },
     slidesPerView: 2,
-    spaceBetween: 34,
+    spaceBetween: 24,
     slidesPerGroup: 2,
     slidesPerColumn: 2,
 
     breakpoints: {
       1299: {
         slidesPerView: 3,
-        spaceBetween: 52,
+        spaceBetween: 50,
         slidesPerGroup: 3,
         slidesPerColumn: 2,
       }
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
       enabled: true,
     },
     slidesPerView: 2,
-    spaceBetween: 50,
+    spaceBetween: 24,
     slidesPerGroup: 2,
 
     breakpoints: {
