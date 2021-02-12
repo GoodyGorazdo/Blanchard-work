@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     autoHeight: false,
 
+    watchSlidesProgress: true,
+
     navigation: {
       nextEl: '.gallery-swiper-button-next',
       prevEl: '.gallery-swiper-button-prev'
@@ -14,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
       el: '.gallery-swiper-pagination',
       type: 'fraction',
     },
-    // grabCursor: true,
     keyboard: {
       enabled: true,
     },
@@ -22,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
     spaceBetween: 24,
     slidesPerGroup: 2,
     slidesPerColumn: 2,
-
     breakpoints: {
       1299: {
         slidesPerView: 3,
@@ -32,8 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
   });
-  // Swiper.updateSize(".gallery-swiper"),
-
   new Swiper('.editions-swiper',{
 
     roundLengths:true,
@@ -59,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
     breakpoints: {
       1299: {
         slidesPerView: 3,
-        spaceBetween: 52,
+        spaceBetween: 50,
         slidesPerGroup: 3,
       }
     }
@@ -168,8 +166,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     document.querySelectorAll('.events__btn').forEach(function(eventsBtn) {
       eventsBtn.addEventListener('click', function(eventsActive) {
-        document.querySelectorAll('.events__list').forEach(function(choiceContent) {
-          choiceContent.classList.toggle('events__list--active')
+        document.querySelectorAll('.events__content').forEach(function(choiceContent) {
+          choiceContent.classList.toggle('events__content--active')
         });
       });
     });

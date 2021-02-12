@@ -9,9 +9,9 @@
 //   });
 // });
 let select = function () {
-  let selectHeader = document.querySelectorAll('.gallery-content-select__head');
+  let selectHeader = document.querySelectorAll('.gallery-filter-select__head');
   // отменен выбор эементов списка
-  let selectItem = document.querySelectorAll('.gallery-content-select__item');
+  let selectItem = document.querySelectorAll('.gallery-filter-select__item');
 
   selectHeader.forEach(item => {
       item.addEventListener('click', selectToggle)
@@ -28,8 +28,8 @@ let select = function () {
 
   function selectChoose() {
       let text = this.innerText,
-          select = this.closest('.gallery-content-select'),
-          currentText = select.querySelector('.gallery-content-select__current');
+          select = this.closest('.gallery-filter-select'),
+          currentText = select.querySelector('.gallery-filter-select__current');
       currentText.innerText = text;
       select.classList.remove('is-active');
 
