@@ -1,8 +1,8 @@
 // document.addEventListener('DOMContentLoaded', function() {
 
 //   document.addEventListener('click', function(ev) {
-//     if (!ev.target.classList.contains('select__gallery--header')) {
-//       document.querySelectorAll('.gallery__select').forEach(function(clickdel1) {
+//     if (!ev.target.classList.contains('gallery-filter-select__item')) {
+//       document.querySelectorAll('.gallery-filter-select').forEach(function(clickdel1) {
 //         clickdel1.classList.remove('is-active')
 //       });
 //     }
