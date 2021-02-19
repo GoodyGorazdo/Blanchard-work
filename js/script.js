@@ -3,11 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
   new Swiper('.gallery-swiper',{
 
     roundLengths:true,
-
-    autoHeight: false,
-
     watchSlidesProgress: true,
-
+    autoHeight: true,
     navigation: {
       nextEl: '.gallery-swiper-button-next',
       prevEl: '.gallery-swiper-button-prev'
@@ -19,17 +16,32 @@ document.addEventListener('DOMContentLoaded', function() {
     keyboard: {
       enabled: true,
     },
-    slidesPerView: 2,
-    spaceBetween: 34,
-    slidesPerGroup: 2,
-    slidesPerColumn: 2,
+    slidesPerView: 1,
+    // spaceBetween: 25,
+    slidesPerGroup: 1,
+    slidesPerColumn: 1,
     breakpoints: {
       1300: {
+        autoHeight: false,
         slidesPerView: 3,
         spaceBetween: 50,
         slidesPerGroup: 3,
         slidesPerColumn: 2,
-      }
+      },
+      768: {
+        autoHeight: false,
+        slidesPerView: 2,
+        spaceBetween: 34,
+        slidesPerGroup: 2,
+        slidesPerColumn: 2,
+      },
+      513: {
+        autoHeight: false,
+        slidesPerView: 2,
+        spaceBetween: 24,
+        slidesPerGroup: 2,
+        slidesPerColumn: 1,
+      },
     }
   });
   new Swiper('.editions-swiper',{
@@ -51,14 +63,18 @@ document.addEventListener('DOMContentLoaded', function() {
       enabled: true,
     },
     slidesPerView: 2,
-    spaceBetween: 24,
+    spaceBetween: 35,
     slidesPerGroup: 2,
-
     breakpoints: {
       1300: {
         slidesPerView: 3,
-        spaceBetween: 48,
+        spaceBetween: 46,
         slidesPerGroup: 3,
+      },
+      1024: {
+        slidesPerView: 2,
+        spaceBetween: 45,
+        slidesPerGroup: 2,
       }
     }
   });
@@ -81,21 +97,39 @@ document.addEventListener('DOMContentLoaded', function() {
       enabled: true,
     },
     slidesPerView: 2,
-    spaceBetween: 40,
+    spaceBetween: 50,
     breakpoints: {
-      1300: {
-        slidesPerView: 2,
-        spaceBetween: 50,
-      },
       1600: {
         slidesPerView: 3,
-        spaceBetween: 50,
+      },
+      768: {
+        slidesOffsetBefore: 11,
+        spaceBetween: 35,
+      }
+    }
+  });
+  new Swiper('.events-swiper',{
+    autoHeight: false,
+    centerInsufficientSlides: true,
+    slidesPerView: 1,
+    spaceBetween: 0,
+    slidesPerGroup: 1,
+    pagination: {
+      clickable: true,
+      el: '.swiper-pagination',
+      type: 'bullets',
+    },
+    breakpoints: {
+      512: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+        slidesPerGroup: 2,
       }
     }
   });
   document.addEventListener('click', function(e) {
     if (!e.target.classList.contains('header-category__choices-btn')) {
-      document.querySelectorAll('.header-category-choices').forEach(function(clickdel) {
+      document.querySelectorAll('.header-category__genre').forEach(function(clickdel) {
         clickdel.classList.remove('header-category-choices--active')
       });
      }
@@ -112,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const path = event.currentTarget.dataset.path
 
     //у каждого элемента, имеющего нужный класс удаляем из списка классов определенный класс(это чтобы отображался только один таб, на который был совешен клик а остальные были скрыиты)
-      document.querySelectorAll('.header-category-choices').forEach(function(tabContent) {
+      document.querySelectorAll('.header-category__genre').forEach(function(tabContent) {
         tabContent.classList.remove('header-category-choices--active')
       });
       //добавляем нужный класс элементу, по которому был совершен клик(ссылаемся на конкретный таб с помощью html атрибута data-произвольноеназвание)
@@ -177,7 +211,16 @@ document.addEventListener('DOMContentLoaded', function() {
           center: [55.76283583656739, 37.64573937816716],
           // Уровень масштабирования. Допустимые значения:
           // от 0 (весь мир) до 19.
-          zoom: 14
+          zoom: 14,
+          controls: ['geolocationControl', 'zoomControl'],
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                center: [55.758338081927846, 37.601089758877414]
+              }
+            }
+          ]
       });
 
       var myPlacemark = new ymaps.Placemark([55.758338081927846, 37.601089758877414], {}, {
